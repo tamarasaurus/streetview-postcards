@@ -47,7 +47,6 @@ const Index = (props) => (
 )
 
 Index.getInitialProps = async function () {
-  console.log(API_URL)
   const res = await fetch(`${API_URL}postcards`)
   const postcards = await res.json()
   return { postcards }
