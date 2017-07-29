@@ -15,6 +15,8 @@ const Layout = (props) => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link href='https://fonts.googleapis.com/css?family=Permanent+Marker|Archivo+Narrow' rel='stylesheet' />
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+      <link rel='shortcut icon' href='/static/favicon.ico' type='image/x-icon' />
+      <link rel='icon' href='/static/favicon.ico' type='image/x-icon' />
     </Head>
     <Header />
     {props.children}
