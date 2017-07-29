@@ -1,18 +1,20 @@
 import Link from 'next/link'
 
-const linkStyle = {
-  marginRight: 15
+const headerStyle = {
+  fontFamily: 'Permanent Marker',
+  fontSize: 60,
+  textAlign: 'center',
+  margin: 0,
+  padding: 0,
+  cursor: 'pointer'
 }
 
 const Header = () => (
-    <div>
-        <Link href="/">
-          <a style={linkStyle}>Home</a>
-        </Link>
-        <Link href="/about">
-          <a style={linkStyle}>About</a>
-        </Link>
-    </div>
+  <div>
+    <Link href='/'>
+      <h1 style={headerStyle}>Street view postcards</h1>
+    </Link>
+  </div>
 )
 
 export default Header

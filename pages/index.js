@@ -1,49 +1,55 @@
 /* global API_URL */
-
-import Layout from '../components/Layout.js'
+import Layout from '../components/Layout'
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
 
+const listStyle = {
+  display: 'flex',
+  marginTop: 60,
+  'flex-direction': 'row',
+  'justify-content': 'flex-start'
+}
+
+const listItemStyle = {
+  fontFamily: 'Archivo Narrow',
+  listStyle: 'none',
+  width: '100%',
+  flex: 1,
+  textAlign: 'center'
+}
+
+const wrapperStyle = {
+  cursor: 'pointer',
+  marginRight: 20
+}
+
+const titleStyle = {
+  paddingTop: 10,
+  display: 'inline-block'
+}
+
 const PostcardLink = (props) => (
-  <li>
+  <li style={listItemStyle}>
     <Link as={`/p/${props.id}`} href={`/postcards?id=${props.id}`}>
-      <a>{props.title}<img src={props.image} title={props.title} /></a>
+      <div style={wrapperStyle}>
+        <img width='300' height='200' src={props.image} title={props.title} />
+        <span style={titleStyle}>{props.title}</span>
+      </div>
     </Link>
   </li>
 )
 
 const Index = (props) => (
-  <Layout>
-    <h1>Street view postcards</h1>
-    <ul>
-      {props.postcards.map((postcard) => (
-        <PostcardLink key={postcard.id} id={postcard.id} title={postcard.place} image={postcard.image.file.url} />
+  <div>
+    <Layout>
+      <ul style={listStyle}>
+        {props.postcards.map((postcard) => (
+          <PostcardLink key={postcard.id} id={postcard.id} title={postcard.place} image={postcard.image.file.url} />
       ))}
-    </ul>
-    <style jsx>{`
-      h1, a {
-        font-family: "Arial";
-      }
-
-      ul {
-        padding: 10px;
-      }
-
-      li {
-        list-style: none;
-        margin: 5px 0;
-      }
-
-      a {
-        text-decoration: none;
-        color: blue;
-      }
-
-      a:hover {
-        opacity: 0.6;
-      }
-    `}</style>
-  </Layout>
+      </ul>
+      <style jsx>{``}</style>
+    </Layout>
+  </div>
 )
 
 Index.getInitialProps = async function () {

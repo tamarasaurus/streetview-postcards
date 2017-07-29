@@ -3,6 +3,20 @@
     "next/babel"
   ],
   "plugins": [
-    ["transform-define", "./env.js"]
+    ["transform-define", "./env.js"],
+    [
+      "module-resolver", {
+        "root": ["."],
+        "alias": {
+          "styles": "./styles"
+        },
+        "cwd": "babelrc"
+    }],
+    [
+      "wrap-in-js",
+      {
+        "extensions": ["css$", "scss$"]
+      }
+    ]
   ]
 }
