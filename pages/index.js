@@ -15,7 +15,7 @@ const Index = (props) => (
     <h1>Street view postcards</h1>
     <ul>
       {props.postcards.map(({show}) => (
-        <PostcardLink key={show.id} id={show.id} title={show.name}/>
+        <PostcardLink key={show.id} id={show.id} title={show.name} />
       ))}
     </ul>
     <style jsx>{`
@@ -44,7 +44,7 @@ const Index = (props) => (
   </Layout>
 )
 
-Index.getInitialProps = async function() {
+Index.getInitialProps = async function () {
   const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
   const data = await res.json()
 

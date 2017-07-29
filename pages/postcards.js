@@ -11,7 +11,6 @@ const Postcards =  (props) => (
 )
 
 Postcards.getInitialProps = async function (context) {
-  console.log(context.query)
   const { id } = context.query
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`)
   const show = await res.json()
