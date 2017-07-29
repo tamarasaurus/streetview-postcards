@@ -6,6 +6,7 @@ const headerStyle = {
   textAlign: 'center',
   margin: 0,
   padding: 0,
+  paddingBottom: 60,
   cursor: 'pointer'
 }
 

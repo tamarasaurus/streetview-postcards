@@ -5,16 +5,17 @@ import Map from '../components/Map'
 import fetch from 'isomorphic-unfetch'
 
 const colStyle = {
-  width: '100%',
-  marginTop: 60
+  width: '100%'
 }
 
 const nameStyle = {
-  fontFamily: 'Archivo Narrow'
+  fontFamily: 'Archivo Narrow',
+  fontSize: 24
 }
 
 const descriptionStyle = {
-  fontFamily: 'Archivo Narrow'
+  fontFamily: 'Archivo Narrow',
+  fontSize: 18
 }
 
 const Postcards = ({postcard}) => (
@@ -24,7 +25,7 @@ const Postcards = ({postcard}) => (
       <Map url={postcard.mapUrl} linkUrl={postcard.url} />
     </div>
     <div style={colStyle}>
-      <h2 style={nameStyle}>{postcard.name}</h2>
+      <h2 style={nameStyle}>{postcard.place}</h2>
       <p style={descriptionStyle}>{postcard.description}</p>
     </div>
   </Layout>

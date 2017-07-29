@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const listStyle = {
   display: 'flex',
-  marginTop: 60,
+  // marginTop: 60,
   'flex-direction': 'row',
   'justify-content': 'flex-start'
 }
