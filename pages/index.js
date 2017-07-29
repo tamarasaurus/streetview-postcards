@@ -18,6 +18,29 @@ const Index = (props) => (
         <PostcardLink key={show.id} id={show.id} title={show.name}/>
       ))}
     </ul>
+    <style jsx>{`
+      h1, a {
+        font-family: "Arial";
+      }
+
+      ul {
+        padding: 10px;
+      }
+
+      li {
+        list-style: none;
+        margin: 5px 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: blue;
+      }
+
+      a:hover {
+        opacity: 0.6;
+      }
+    `}</style>
   </Layout>
 )
 

@@ -1,5 +1,6 @@
 import Layout from '../components/Layout.js'
 import fetch from 'isomorphic-unfetch'
+import Markdown from 'react-markdown'
 
 const Postcards =  (props) => (
     <Layout>

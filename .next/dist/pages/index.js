@@ -12,6 +12,10 @@ var _asyncToGenerator2 = require('next/node_modules/babel-runtime/helpers/asyncT
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
+var _style = require('styled-jsx/style.js');
+
+var _style2 = _interopRequireDefault(_style);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -30,51 +34,22 @@ var _link2 = _interopRequireDefault(_link);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/tamararobichet/Code/streetview-postcards/pages/index.js?entry';
-
-
 var PostcardLink = function PostcardLink(props) {
-  return _react2.default.createElement('li', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    }
-  }, _react2.default.createElement(_link2.default, { as: '/p/' + props.id, href: '/postcards?id=' + props.id, __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    }
-  }, _react2.default.createElement('a', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    }
-  }, props.title)));
+  return _react2.default.createElement('li', null, _react2.default.createElement(_link2.default, { as: '/p/' + props.id, href: '/postcards?id=' + props.id }, _react2.default.createElement('a', null, props.title)));
 };
 
 var Index = function Index(props) {
-  return _react2.default.createElement(_Layout2.default, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    }
-  }, _react2.default.createElement('h1', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    }
+  return _react2.default.createElement(_Layout2.default, null, _react2.default.createElement('h1', {
+    'data-jsx': 864050010
   }, 'Street view postcards'), _react2.default.createElement('ul', {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    }
+    'data-jsx': 864050010
   }, props.postcards.map(function (_ref) {
     var show = _ref.show;
-    return _react2.default.createElement(PostcardLink, { key: show.id, id: show.id, title: show.name, __source: {
-        fileName: _jsxFileName,
-        lineNumber: 18
-      }
-    });
-  })));
+    return _react2.default.createElement(PostcardLink, { key: show.id, id: show.id, title: show.name });
+  })), _react2.default.createElement(_style2.default, {
+    styleId: 864050010,
+    css: 'h1[data-jsx="864050010"],a[data-jsx="864050010"]{font-family:"Arial"}ul[data-jsx="864050010"]{padding:10px}li[data-jsx="864050010"]{list-style:none;margin:5px 0}a[data-jsx="864050010"]{-webkit-text-decoration:none;text-decoration:none;color:blue}a[data-jsx="864050010"]:hover{opacity:0.6}'
+  }));
 };
 
 Index.getInitialProps = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {
