@@ -1,0 +1,17 @@
+{
+  "name": "streetview-postcards",
+  "version": "1.0.0",
+  "description": "migrate streetview postcards website",
+  "main": "index.js",
+  "repository": "git@github.com:tamarasaurus/streetview-postcards.git",
+  "author": "Tamara Robichet <v0ld3m0r7@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^2.4.9",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "scripts": {
+    "dev": "next"
+  }
+}
