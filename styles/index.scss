@@ -7,3 +7,23 @@
 li:hover {
   opacity: 0.9;
 }
+
+.map:before {
+  content: '';
+  background: rgba(0,0,0,0);
+  -webkit-transition: background 0.1s;
+}
+
+.map:hover:before {
+  content: 'Open in Google Street View';
+  background: rgba(0,0,0,0.4);
+  width: 320px;
+  height: 400px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding-top: 180px;
+  box-sizing: border-box;
+  font-family: Archivo Narrow;
+  font-size: 20px;
+}
