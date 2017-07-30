@@ -5,5 +5,6 @@ if (dev) env(path.join(__dirname, '/.env'))
 
 module.exports = {
   API_URL: process.env.API_URL,
-  GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY
+  GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
+  GOOGLE_ANALYTICS_CODE: process.env.GOOGLE_ANALYTICS_CODE
 }
