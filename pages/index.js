@@ -3,19 +3,11 @@ import Layout from '../components/Layout'
 import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
 
-const listStyle = {
-  display: 'flex',
-  // marginTop: 60,
-  'flex-direction': 'row',
-  'justify-content': 'flex-start'
-}
-
 const listItemStyle = {
   fontFamily: 'Archivo Narrow',
   listStyle: 'none',
-  width: '100%',
-  flex: 1,
-  textAlign: 'center'
+  textAlign: 'center',
+  marginTop: 20
 }
 
 const wrapperStyle = {
@@ -29,7 +21,7 @@ const titleStyle = {
 }
 
 const PostcardLink = (props) => (
-  <li style={listItemStyle}>
+  <li className='col-xs-12 col-sm-4' style={listItemStyle}>
     <Link as={`/p/${props.id}`} href={`/postcards?id=${props.id}`}>
       <div style={wrapperStyle}>
         <img width='300' height='200' src={props.image} title={props.title} />
@@ -42,7 +34,7 @@ const PostcardLink = (props) => (
 const Index = (props) => (
   <div>
     <Layout>
-      <ul style={listStyle}>
+      <ul className='row'>
         {props.postcards.map((postcard) => (
           <PostcardLink key={postcard.id} id={postcard.id} title={postcard.place} image={postcard.image.file.url} />
       ))}

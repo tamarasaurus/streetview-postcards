@@ -1,3 +1,5 @@
+/* global GOOGLE_ANALYTICS_CODE */
+
 import Header from './Header'
 import stylesheet from 'styles/index.scss'
 import Head from 'next/head'
