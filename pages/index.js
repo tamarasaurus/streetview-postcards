@@ -21,7 +21,7 @@ const titleStyle = {
 }
 
 const PostcardLink = (props) => (
-  <li className='col-xs-12 col-sm-4' style={listItemStyle}>
+  <li className='col-xs-12 col-sm-6 col-md-4' style={listItemStyle}>
     <Link as={`/p/${props.id}`} href={`/postcards?id=${props.id}`}>
       <div style={wrapperStyle}>
         <img width='300' height='200' src={props.image} title={props.title} />
