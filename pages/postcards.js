@@ -13,11 +13,6 @@ const nameStyle = {
   fontSize: 24
 }
 
-const descriptionStyle = {
-  fontFamily: 'Archivo Narrow',
-  fontSize: 18
-}
-
 const Postcards = ({postcard}) => (
   <Layout>
     <div style={colStyle}>
@@ -26,7 +21,6 @@ const Postcards = ({postcard}) => (
     </div>
     <div style={colStyle}>
       <h2 style={nameStyle}>{postcard.place}</h2>
-      <p style={descriptionStyle}>{postcard.description}</p>
     </div>
   </Layout>
 )
