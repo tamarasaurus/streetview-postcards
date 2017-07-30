@@ -7,7 +7,7 @@ const listItemStyle = {
   fontFamily: 'Archivo Narrow',
   listStyle: 'none',
   textAlign: 'center',
-  marginTop: 20
+  marginBottom: 20
 }
 
 const wrapperStyle = {
