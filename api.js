@@ -35,9 +35,9 @@ const findPostcards = (id, res) => {
 const formatPostcard = ({ sys, fields }) => {
   const { id, createdAt } = sys
   const image = fields.image.fields
-  const { place, description, latlong, url } = fields
+  const { place, latlong, url } = fields
   const mapUrl = createGoogleMapImageUrl(latlong.lat, latlong.lon)
-  return { id, image, createdAt, place, description, latlong, url, mapUrl }
+  return { id, image, createdAt, place, latlong, url, mapUrl }
 }
 
 router.get('/search', (req, res) => res.json({ results: [] }))
