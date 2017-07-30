@@ -1,2 +1,2 @@
 # streetview-postcards
-migrate streetview postcards website
+http://www.streetview-postcards.net/
